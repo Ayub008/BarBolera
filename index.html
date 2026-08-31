@@ -332,7 +332,9 @@ nav {
 <script>
     const boton = document.querySelector(".menu-boton");
     const enlaces = document.querySelector(".menu-enlaces");
-
+.menu-enlaces.abierto {
+    display: flex;
+}
     boton.addEventListener("click", () => {
         enlaces.classList.toggle("abierto");
     });
