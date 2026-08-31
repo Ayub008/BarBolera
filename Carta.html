@@ -1,34 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Carta | Nombre del Bar</title>
+    <title>Carta | BAR BOLERA</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: "MiFuente";
+            src: url("fuentes/OPTIMA.TTF") format("truetype");
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "MiFuente";
+            src: url("OPTIMA_B.TTF") format("truetype");
+            font-weight: 700;
+        }
+
+        body {
+            font-family: "MiFuente", sans-serif;
+            background: #f7f2eb;
+            color: #2b2118;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 40px;
+        }
+
+        .carta {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .plato {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .plato img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contenido {
+            padding: 18px;
+        }
+
+        .contenido h2 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .precio {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .ingredientes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .ingrediente {
+            padding: 6px 10px;
+            border: 1px solid #d6c5b4;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        @media (min-width: 900px) {
+            .carta {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            .carta {
+                gap: 15px;
+            }
+
+            .contenido {
+                padding: 14px;
+            }
+
+            .contenido h2 {
+                font-size: 18px;
+            }
+
+            .precio {
+                font-size: 17px;
+            }
+
+            .ingrediente {
+                font-size: 12px;
+                padding: 5px 8px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="carta.html">Carta</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-
     <h1>Nuestra carta</h1>
 
-    <h2>Cafés</h2>
-    <p>Café solo — 1,50 €</p>
-    <p>Café con leche — 1,70 €</p>
+    <main class="carta">
 
-    <h2>Desayunos</h2>
-    <p>Tostada — 2,50 €</p>
-    <p>Desayuno completo — 4,50 €</p>
+        <article class="plato">
 
-    <a href="index.html">← Volver al inicio</a>
+            <img src="imagenes/cafe.jpg" alt="Café con leche">
+
+            <div class="contenido">
+
+                <h2>Café con leche</h2>
+
+                <p class="precio">1,50 €</p>
+
+                <div class="ingredientes">
+                    <span class="ingrediente">☕ Café</span>
+                    <span class="ingrediente">🥛 Leche</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="plato">
+
+            <img src="imagenes/cafe-solo.jpg" alt="Café solo">
+
+            <div class="contenido">
+
+                <h2>Café solo</h2>
+
+                <p class="precio">1,30 €</p>
+
+                <div class="ingredientes">
+                    <span class="ingrediente">☕ Café</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="plato">
+
+            <img src="imagenes/tostada.jpg" alt="Tostada">
+
+            <div class="contenido">
+
+                <h2>Tostada con tomate</h2>
+
+                <p class="precio">2,50 €</p>
+
+                <div class="ingredientes">
+                    <span class="ingrediente">🍞 Pan</span>
+                    <span class="ingrediente">🍅 Tomate</span>
+                    <span class="ingrediente">🫒 Aceite</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="plato">
+
+            <img src="imagenes/bocadillo.jpg" alt="Bocadillo">
+
+            <div class="contenido">
+
+                <h2>Bocadillo de tortilla</h2>
+
+                <p class="precio">4,50 €</p>
+
+                <div class="ingredientes">
+                    <span class="ingrediente">🥖 Pan</span>
+                    <span class="ingrediente">🥚 Tortilla</span>
+                    <span class="ingrediente">🧂 Sal</span>
+                </div>
+
+            </div>
+
+        </article>
+
+    </main>
 
 </body>
-
 </html>
